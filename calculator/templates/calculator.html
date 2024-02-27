@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<form method='post'>
+{% csrf_token %}
+<input type="text" name="expression" id="expression" placeholder="Enter an expression">
+<button type="submit">Calculate</button>
+</form>
+{% if result == 0 %}
+<h2>Result:</h2>
+{% else %}
+<h2>Result:{{result}}</h2>
+{% endif %}
+</body>
+</html>
